@@ -201,3 +201,16 @@ main { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gut); }
   .s-dock .s-btn { flex: 1; min-height: 48px; font-size: .88rem; padding: 0 .9em; white-space: nowrap; }
   .s-dock .s-btn:first-child { flex: 1.7; }
 }
+
+/* правка Юли 28.10.2026: фото и онлайн-запись на первом экране выровнены по низу (только компьютер) */
+@media (min-width: 861px) {
+  .s-hero { align-items: stretch; }
+  .s-hero__text { display: flex; flex-direction: column; }
+  .s-hero__photo { margin-top: auto; padding-top: 30px; flex: 1 1 auto; display: flex; min-height: 0; }
+  .s-hero__photo img { aspect-ratio: auto; height: 100%; min-height: 220px; }
+  .s-hero__widget { position: static; display: flex; flex-direction: column; }
+  .s-hero__widget > .s-widget { flex: 1 1 auto; }
+}
+
+/* заголовок в две строки: перенос перед «для авто и мотоциклов» */
+.s-hero h1 { white-space: pre-line; }
